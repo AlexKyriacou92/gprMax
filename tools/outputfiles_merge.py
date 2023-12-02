@@ -1,4 +1,4 @@
-# Copyright (C) 2015-2020: The University of Edinburgh
+# Copyright (C) 2015-2023: The University of Edinburgh
 #                 Authors: Craig Warren and Antonis Giannopoulos
 #
 # This file is part of gprMax.
@@ -72,7 +72,7 @@ def merge_files(basefilename, removefiles=False):
     """
 
     outputfile = basefilename + '_merged.out'
-    files = glob.glob(basefilename + '*.out')
+    files = glob.glob(basefilename + '[0-9]*.out')
     outputfiles = [filename for filename in files if '_merged' not in filename]
     modelruns = len(outputfiles)
 

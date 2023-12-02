@@ -1,4 +1,4 @@
-# Copyright (C) 2015-2020: The University of Edinburgh
+# Copyright (C) 2015-2023: The University of Edinburgh
 #                 Authors: Craig Warren and Antonis Giannopoulos
 #
 # This file is part of gprMax.
@@ -21,6 +21,7 @@ from string import Template
 import h5py
 
 from gprMax._version import __version__
+from gprMax.grid import Ix, Iy, Iz
 
 
 def store_outputs(iteration, Ex, Ey, Ez, Hx, Hy, Hz, G):

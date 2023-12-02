@@ -1,4 +1,4 @@
-# Copyright (C) 2015-2020: The University of Edinburgh
+# Copyright (C) 2015-2023: The University of Edinburgh
 #                 Authors: Craig Warren and Antonis Giannopoulos
 #
 # This file is part of gprMax.
@@ -399,7 +399,7 @@ def run_model(args, currentmodelrun, modelend, numbermodelruns, inputfile, usern
 
     # If geometry information to be reused between model runs then FDTDGrid
     # class instance must be global so that it persists
-    if not args.geometry_fixed:
+    if not args.geometry_fixed or currentmodelrun == modelend:
         del G
 
     return tsolve
